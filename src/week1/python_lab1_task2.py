@@ -8,11 +8,15 @@ Write a function `greet_user(name)` that:
 Ask user for their name and print result.
 """
 
-def greet_user(name):
-    """Return a greeting message after cleaning and capitalizing the name."""
-    # TODO: implement cleaning and formatting
-    pass
+
+def greet_user(name: str) -> str:
+    new_name = name.strip().capitalize()
+    final_name = (f"Hello, {new_name}! Welcome to Python!")
+    return final_name
+    ##I cannot get behind the idea of not specifying a return type for a method
 
 if __name__ == "__main__":
-    # TODO: read name from input and print greeting
-    pass
+    name_input = input("Enter a name: ")
+    print(greet_user(name_input))
+
+
