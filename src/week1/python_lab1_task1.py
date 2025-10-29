@@ -8,12 +8,18 @@ Ask user for radius and print result with 2 decimals.
 """
 
 # TODO: import math
+import math
+
+##def circle_area(radius):
 
 def circle_area(radius):
-    """Return the area of a circle given its radius."""
-    # TODO: implement formula using math.pi
-    pass
+    pi = 3.14
+    output = (radius**2) * math.pi
+    return output
+
 
 if __name__ == "__main__":
     # TODO: ask for user input, call circle_area(), and print formatted result
-    pass
+    ##print("Please enter a value for radius\n")
+    radius_prompt = float(input("Enter radius: "))
+    print(f"The area of the circle with a radius of {radius_prompt} is: {circle_area(radius_prompt):.3f}")
