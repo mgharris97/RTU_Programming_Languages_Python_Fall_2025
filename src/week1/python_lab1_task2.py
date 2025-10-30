@@ -18,5 +18,6 @@ def greet_user(name: str) -> str:
 if __name__ == "__main__":
     name_input = input("Enter a name: ")
     print(greet_user(name_input))
+    ##
 
 
