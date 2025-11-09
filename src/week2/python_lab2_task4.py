@@ -21,17 +21,20 @@ prices = [12.5, 9.9, 15.0, 22.3, 5.0]
 quantities = [2, 5, 1, 3, 4]
 
 # TODO: Compute totals using map()
-totals = []
+totals = list(map(lambda x,y: y*x, prices, quantities)) #lambda is like a tiny function written in-line. Here x, y are parameters
 
 # TODO: Filter totals above 30
-high_totals = []
+#   if w > 30:
+#        return w
+high_totals = list(filter(lambda x: x>30, totals))
+
 
 # TODO: Pair prices and quantities with zip()
-pairs = []
+pairs = list(zip(prices, quantities))
 
 # TODO: Repeat using list comprehensions
-totals_comp = []
-high_totals_comp = []
+totals_comp = [p*q for p,q in zip(prices, quantities)] #newlist = [expression for item in iterable if condition == True]
+high_totals_comp = [x for x in totals if x > 30]
 
 # TODO: Print results
 print("Totals:", totals)

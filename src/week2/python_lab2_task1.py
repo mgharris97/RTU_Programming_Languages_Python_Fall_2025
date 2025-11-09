@@ -21,7 +21,7 @@ city_population = {"Riga": 632614, "New York": 8419600, "Berlin": 3769000, "Lond
 
 # TODO: Compute aggregates
 average_temperature = sum(temperatures) / len(temperatures)
-largest_city = max(city_population, key=city_population.get)
+largest_city = max(city_population, key=city_population.get) #this works. Not sure why it's showing an error
 largest_population = max(city_population.values())
 total_population = sum(city_population.values())
 

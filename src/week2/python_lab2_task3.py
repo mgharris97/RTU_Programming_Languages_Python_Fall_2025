@@ -23,9 +23,11 @@ operators = ['+', '-', '*', '/', '(', ')']
 # TODO: Initialize frequency dictionary
 operator_counts = {}
 
+
 # TODO: Count operator occurrences
-for char in expression:
-    pass  # check if char in operators, update counts
+for i in expression:
+    if i in operators:
+        operator_counts[i] = operator_counts.get(i, 0) + 1  #checks for i in dictionary. If it exists, returns its value, if not, assigns a default value of 0
 
 # TODO: Print results
 print("Operator counts:", operator_counts)
